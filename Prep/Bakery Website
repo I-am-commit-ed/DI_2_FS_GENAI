@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Crust Bakery || Materialize CSS</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style>
+        /* Custom Styles to enhance Materialize */
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1756062/pexels-photo-1756062.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover;
+            background-position: center;
+            height: 90vh; /* 90% of viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Section Spacing */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Card Image fix */
+        .card .card-image img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Footer styling */
+        .page-footer {
+            background-color: #3e2723; /* Brown darken-4 */
+        }
+        
+        nav {
+            background-color: #3e2723; /* Brown darken-4 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION MENU 🧭 -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="#home" class="brand-logo">Golden Crust</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                
+                <!-- Desktop Menu -->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- HERO SECTION (HOME) -->
+    <div id="home" class="hero">
+        <div class="container">
+            <h1>Artisan Baking</h1>
+            <p class="flow-text">Fresh ingredients, traditional recipes, and a whole lot of love.</p>
+            <a href="#gallery" class="btn-large orange darken-3 waves-effect waves-light">View Menu</a>
+        </div>
+    </div>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="container">
+        <div class="row">
+            <!-- Text Column -->
+            <div class="col s12 m6">
+                <h3 class="brown-text text-darken-3">Our Story</h3>
+                <p>Welcome to Golden Crust. We believe that baking is not just a process, but an art form. Started in 2010, our goal has always been to bring the smell of fresh sourdough and sweet pastries to the neighborhood.</p>
+                <p>We work with local farmers to source the best organic flour and fresh fruits for our tarts. Every loaf is hand-shaped and baked in our stone ovens.</p>
+            </div>
+            <!-- Image Column -->
+            <div class="col s12 m6">
+                <img src="https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                     alt="Baker hands" class="responsive-img z-depth-3 rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY / SERVICES SECTION -->
+    <section id="gallery" class="grey lighten-4">
+        <div class="container">
+            <h3 class="center-align brown-text text-darken-3">Fresh From The Oven</h3>
+            <p class="center-align">Hover over the cards to see more.</p>
+            
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/1775035/pexels-photo-1775035.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                            <span class="card-title">Donuts</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Classic glazed and chocolate frosted artisan donuts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/1028704/pexels-photo-1028704.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                            <span class="card-title">Breakfast</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Healthy granola bowls with fresh seasonal fruits.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/8027652/pexels-photo-8027652.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                            <span class="card-title">Sourdough</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Our signature rustic bread, fermented for 48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://images.pexels.com/photos/5945565/pexels-photo-5945565.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                            <span class="card-title">Croissants</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Buttery, flaky layers made with real French butter.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION 📬 -->
+    <section id="contact" class="container">
+        <div class="row">
+            <div class="col s12 center-align">
+                <h3 class="brown-text text-darken-3">Contact Us</h3>
+                <p>Have a question or want to order a custom cake? Send us a message!</p>
+            </div>
+        </div>
+
+        <!-- Grid with Offset: Form takes 8 columns, offset by 2 to center it -->
+        <div class="row">
+            <form class="col s12 m8 offset-m2">
+                <div class="card-panel z-depth-2">
+                    
+                    <!-- Name Field -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Full Name</label>
+                        </div>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email Address</label>
+                        </div>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                            <label for="icon_prefix2">Your Message</label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="row center-align">
+                        <button class="btn waves-effect waves-light orange darken-3" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Golden Crust Bakery</h5>
+                    <p class="grey-text text-lighten-4">Baking the world a better place, one loaf at a time.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023 Golden Crust Bakery
+                <a class="grey-text text-lighten-4 right" href="#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Initialize Materialize Components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Mobile Sidenav
+            var sidenavs = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenavs);
+
+            // Initialize Parallax (if we wanted to add it later) or other components
+            var materials = document.querySelectorAll('.materialboxed');
+            M.Materialbox.init(materials);
+        });
+    </script>
+</body>
+
+</html>
