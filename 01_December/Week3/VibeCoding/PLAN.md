@@ -275,3 +275,7 @@ Build a personalized Wordle-style game from scratch. Start with core mechanics, 
 ## LET'S VIBE! 🎮
 
 Start with Phase 1 and work through step by step. Don't rush to Phase 2 until Phase 1 is solid. Have fun and make it yours!
+
+
+
+read @filename and start vibe
