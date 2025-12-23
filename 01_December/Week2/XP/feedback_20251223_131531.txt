@@ -1,0 +1,7 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week2/XP/oop.py
+Brief justification:
+- correctness: The code accurately implements all four exercises as described in the chapter content.  Each class is defined with the specified attributes and methods, and the example use cases are correctly executed, aligning perfectly with the instructions. The bonus for Exercise 4 is also correctly implemented.
+- readability: The code is very well-formatted, uses meaningful variable names, and includes comments that clearly indicate each step of the exercises, making it easy to understand and follow.
+- performance: The code's performance is efficient for the scale of the exercises. The algorithms used for finding the oldest cat, comparing dog sizes, and sorting/grouping animals are all appropriate and do not introduce unnecessary complexity.
+- security: There are no apparent security concerns in this code. The exercises focus on object-oriented programming concepts and do not involve any external inputs or potentially vulnerable operations.
+
