@@ -1,0 +1,10 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week2/XP/XP_funtions.py
+suggestions for improvement:
+- Consider adding comments to explain more complex logic, although the code is already quite clear.
+- The use of f-strings is excellent for readability and maintainability.
+Brief justification:
+- correctness: The code correctly implements all exercises as described in the prompt, including the bonus requirements for Exercise 5 and Exercise 7. Each function performs the expected task, and the outputs match the expected outputs provided in the prompt.
+- readability: The code is well-structured and easy to read, with clear function definitions and descriptive variable names. Using f-strings enhances readability. The code is also separated into sections, each answering the exercises.
+- performance: The code exhibits excellent performance. The functions are straightforward and efficient, with no unnecessary overhead or computationally expensive operations.
+- security: There are no apparent security concerns with this code. It does not handle user input in a way that could lead to vulnerabilities, and it does not interact with any external resources or systems.
+

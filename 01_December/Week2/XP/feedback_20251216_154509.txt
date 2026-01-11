@@ -1,0 +1,7 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week2/XP/XP16Dec.py
+Brief justification:
+- correctness: The code accurately and completely solves all the problems and implements all the functionality described in the chapter content and questions. Each exercise is addressed, and the code produces the expected results.  The bonus part of Exercise 9 is not addressed, but it's a bonus and doesn't affect the overall correctness since the core requirements are met.
+- readability: The code is well-formatted and easy to read. Comments are used effectively to explain each section and the logic behind the code. Variable names are descriptive.
+- performance: The code is performs as expected. The loops and data structure usages are appropriate for the scale of the problems.
+- security: The code uses `input()` to get user data. Exercise 6 and 9 converts this value to `int`, which could cause ValueError. It would be ideal to have a try/except to prevent the program from crashing.
+
