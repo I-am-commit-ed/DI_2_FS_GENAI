@@ -1,0 +1,11 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week2/XP/XP16Dec.py
+suggestions for improvement:
+- This submission is completely unrelated to the Chapter Content/Questions provided.
+- The code addresses topics like sets, tuples, lists, loops, and conditionals, but these are not mentioned in the original instructions.
+- The submission provides a comprehensive set of exercises covering various Python concepts, however, it doesn't attempt to solve the exercises defined in the prompt.
+Brief justification:
+- correctness: The code does not address any of the exercises described in the Chapter Content/Questions, so its correctness score is 0%. The exercises in the prompt cover printing, variables, mathematical operations, comparison operators, if statements, and user input, none of which are addressed by the submission's exercises.
+- readability: N/A
+- performance: N/A
+- security: N/A
+
