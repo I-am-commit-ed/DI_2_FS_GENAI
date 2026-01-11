@@ -1,0 +1,19 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week4/XP/XP2anagrams.py
+suggestions for improvement:
+- The AnagramChecker class instantiation is done in main but should be created outside the while loop to load the file only once during the program runtime.
+- Consider adding error handling to manage unexpected issues during the anagram checking process.
+- The code does not handle the case where the sowpods.txt is zipped. Consider extracting the data.
+Correctness: 75%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week4/XP/Xpall.py
+suggestions for improvement:
+- Consider adding a docstring to the `main` function to briefly describe its purpose.
+- The use of type hints throughout the code enhances readability and helps prevent errors.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week4/XP/anagram_checker.py
+suggestions for improvement:
+- Consider using `collections.Counter` for more efficient anagram checking, especially for longer words. This could improve the `is_anagram` method.
+- The code could benefit from more comprehensive error handling, such as handling potential exceptions when reading the word list file.
+Correctness: 100%
+-----
