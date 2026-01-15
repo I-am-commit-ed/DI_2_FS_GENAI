@@ -1,0 +1,11 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week3/JSON/XP1.py
+suggestions for improvement:
+- Consider adding a docstring to the `main` function for Exercise 1 to explain its purpose.
+- The code includes `encoding='utf-8'` when opening files, which is good practice for handling character encodings.
+- The use of `Pathlib` is a modern and recommended way to handle file paths.
+Brief justification:
+- correctness: The code accurately and completely solves both exercises as described in the Chapter Content/Questions. Exercise 1 generates a random sentence from a word list based on user input, including input validation and error handling. Exercise 2 correctly parses a JSON string, accesses a nested key, adds a new key, and saves the modified JSON to a file. All instructions are followed precisely.
+- readability: The code is well-structured and easy to read. It uses meaningful variable names, includes comments to explain each step, and separates the two exercises into logical sections. The use of type hints also enhances readability.
+- performance: The code is efficient for the given tasks. The random sentence generation and JSON manipulation are performed without unnecessary overhead. The file handling is also done efficiently using context managers.
+- security: The code is reasonably secure. It includes basic error handling to prevent crashes and uses `encoding='utf-8'` when opening files to handle character encodings correctly. However, additional input sanitization could be added for the file path to prevent path traversal vulnerabilities.
+

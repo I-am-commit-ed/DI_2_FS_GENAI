@@ -1,0 +1,24 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week3/XP/Modules/DC1.py
+suggestions for improvement:
+- This code is unrelated to the exercises provided in the instructions. The exercises covered dunder methods for a `Currency` class, module imports, the `string` module, the `datetime` module, and the `faker` module. This code defines a `Circle` class with various functionalities, which is not aligned with the specified learning objectives.
+Correctness: 0.0%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week3/XP/Modules/XP1.py
+suggestions for improvement:
+- Consider adding more comments within the dunder methods to explain the logic behind each operation, especially the type checking and error handling.
+- The use of f-strings is good for readability. Ensure consistency in string formatting throughout the code.
+- While the code works, explore other ways to handle unsupported operand types, potentially using `NotImplemented` more explicitly.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week3/XP/Modules/XP2.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week3/XP/Modules/XP3-7.py
+suggestions for improvement:
+- Consider implementing the Currency class and its dunder methods from Exercise 1, as this is a core component of the chapter.
+- Implement the function from Exercise 2 in a separate file (`func.py`) and then import and call it in your main file (`exercise_one.py`).
+- Uncomment the example usage lines in Exercises 6 and 7 to make the code executable and demonstrate its functionality.
+Correctness: 75%
+-----
