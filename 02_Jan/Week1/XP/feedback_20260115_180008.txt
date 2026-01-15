@@ -1,0 +1,7 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week1/XP/XP1.sql
+Brief justification:
+- correctness: The code accurately addresses all the requirements of Exercise 1. It creates the database (though commented out), creates the `items` and `customers` tables, inserts the specified data, and executes all the required SQL queries to fetch the data. The comments also correctly predict the outcome of the query for customers with the last name 'Smith'.
+- readability: The code is well-formatted and easy to read. The comments clearly explain each step, making it easy to understand the purpose of the code.
+- performance: The code uses standard SQL queries, which are generally efficient for the given tasks. There are no performance bottlenecks.
+- security: The code doesn't involve any user input or external data, so there are no apparent security risks. Using parameterized queries would further enhance security in a real-world application.
+

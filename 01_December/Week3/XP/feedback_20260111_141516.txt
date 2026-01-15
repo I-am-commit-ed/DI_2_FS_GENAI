@@ -1,0 +1,6 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week3/XP/OOP_xp.py
+suggestions for improvement:
+- The PetDog class could have taken name, age, and weight directly instead of using *args and **kwargs, though the current approach does work.
+- Consider adding type hints to the function signatures for improved clarity.
+Correctness: 100%
+-----
