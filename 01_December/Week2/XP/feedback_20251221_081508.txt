@@ -1,0 +1,7 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/01_December/Week2/XP/XP_Dictionaries.py
+Brief justification:
+- correctness: All exercises are correctly implemented, directly addressing the problems described in the chapter content. Exercise 1 uses zip and dict to convert the lists, Exercise 2 correctly uses if/elif/else for the cost calculation and the bonus asks for user input, Exercise 3 manipulates and accesses the Zara dictionary, and Exercise 4 creates the three dictionaries in the requested format. Every requested instruction is correctly implemented.
+- readability: The code is very well-formatted, with clear comments separating each exercise. Variable names are descriptive. It is easy to understand the purpose and functionality of each section.
+- performance: The code is efficient. The use of dictionary comprehensions and built-in functions like `zip` and `enumerate` contributes to its performance. There are no unnecessary loops or operations.
+- security: There are no apparent security issues. User input in Exercise 2 is handled with type conversion (`int()`), but could use more input validation to prevent errors.
+
