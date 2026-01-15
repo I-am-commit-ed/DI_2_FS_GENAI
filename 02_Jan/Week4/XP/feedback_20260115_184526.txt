@@ -1,0 +1,38 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week4/XP/Codebox.py
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week4/XP/Menu_Editor.py
+suggestions for improvement:
+- In `remove_item_from_menu`, you are creating a `MenuItem` object with a price of 0, which is not necessary. You only need the item's name to delete it. Consider modifying the `delete` method to only require a name.
+- In `update_item_from_menu`, you are creating a `MenuItem` object with the old name and price 0. This isn't ideal since you already retrieve the new name and price. The logic should be revisited to ensure data consistency during the update process. The `update` method implementation in `MenuItem` should also be checked.
+- The error handling could be improved with more specific exceptions and logging. For example, specify the `psycopg2` exception that can occur when inserting to DB
+- Consider adding input validation to prevent SQL injection vulnerabilities.
+Correctness: 80%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week4/XP/Menu_Item.py
+suggestions for improvement:
+- The `MenuItem` class should not contain the `get_by_name` and `all_items` methods. Those methods belong in the `MenuManager` class as specified by the instructions.
+- Consider adding error handling or logging within the `except` blocks to provide more informative feedback when operations fail.
+- The `update` method updates the object's attributes after a successful database update, which is good. However, it would be beneficial to add similar behavior for the `save` method, fetching the `item_id` of the newly inserted item and assigning it to the object. This would keep the object synchronized with the database and allow for future operations based on `item_id`.
+Correctness: 70%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week4/XP/Menu_Manager.py
+suggestions for improvement:
+- Consider adding error handling (e.g., try-except blocks) for database operations to gracefully handle potential connection or query errors.
+- Ensure that the database connection (`get_connection`) is properly closed after use to prevent resource leaks.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week4/XP/XP1.py
+suggestions for improvement:
+- The provided code snippet only establishes a database connection and doesn't implement any of the required classes or methods for the restaurant menu manager application.
+- The code doesn't define the MenuItem or MenuManager classes, nor does it implement the save, delete, update, get_by_name, or all_items methods. These are crucial parts of the assignment.
+- The menu_editor.py file with the required functions (show_user_menu, add_item_to_menu, etc.) is also missing.
+Correctness: 0.0%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week4/XP/XP1_I.sql
+suggestions for improvement:
+- The provided code is a SQL script for creating a database and table. It doesn't include the Python code required by the exercises. The exercise requires creating Python classes `MenuItem` and `MenuManager` and implementing methods for interacting with the database. Therefore, the given SQL script, while correct in itself, does not address the problem as defined in the exercise description. Therefore, the correctness score should be 0%.
+Correctness: 0.0%
+-----
