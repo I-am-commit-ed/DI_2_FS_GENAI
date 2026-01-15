@@ -1,0 +1,11 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week3/XP/XP1.sql
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week3/XP/XP1_II.sql
+suggestions for improvement:
+- Consider adding comments to explain the purpose of each query, especially for complex ones.
+- The code is well-structured and easy to follow, but some queries could benefit from more descriptive aliases for table names to improve readability.
+Correctness: 100%
+-----
