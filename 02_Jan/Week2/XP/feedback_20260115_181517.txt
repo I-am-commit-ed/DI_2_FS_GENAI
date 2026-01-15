@@ -1,0 +1,16 @@
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week2/XP/DVD_rentalExercise2.sql
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week2/XP/XP1.sql
+suggestions for improvement:
+- Consider adding comments to explain the purpose of each query, especially in a file that will be shared or reviewed by others.
+Correctness: 100%
+-----
+URL: https://github.com/I-am-commit-ed/DI_2_FS_GENAI/blob/main/02_Jan/Week2/XP/XP_Ninja.sql
+suggestions for improvement:
+- The submitted code appears to be from a different exercise than what is described in the provided text. It includes queries related to deleting purchases and finding customers named Scott, which are not part of the instructions in Exercise 1 or Exercise 2.
+- The code is not relevant to the content provided, thus making it impossible to assess its correctness within the given context.
+Correctness: 0%
+-----
