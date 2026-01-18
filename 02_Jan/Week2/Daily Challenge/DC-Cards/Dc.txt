@@ -1,0 +1,46 @@
+Exercise 1: Quiz (OOP concepts)
+What is a class?
+
+A class is a blueprint/type that defines data (attributes) and behavior (methods) for a kind of object.
+Example: Card defines what a card has (suit, value) and what it can do (maybe __str__).
+
+What is an instance?
+
+An instance is a concrete object created from a class.
+Example: Card("Hearts", "A") is an instance of Card.
+
+What is encapsulation?
+
+Encapsulation is bundling data + methods together and controlling access to internal state.
+In Python, this is often done by:
+
+keeping attributes “internal” by convention (_cards)
+
+exposing safe methods (deal(), shuffle()) instead of letting outside code mess with internals directly.
+
+What is abstraction?
+
+Abstraction is exposing only what’s necessary and hiding implementation details.
+Example: users call deck.deal() without needing to know whether the deck is stored as a list, how cards are removed, etc.
+
+What is inheritance?
+
+Inheritance lets a class (child/subclass) reuse/extend behavior from another class (parent/base class).
+Example: class Student(Person).
+
+What is multiple inheritance?
+
+Multiple inheritance means a class inherits from more than one base class.
+Example: class FlyingCar(Car, Airplane).
+
+What is polymorphism?
+
+Polymorphism means “many forms”: different classes can share the same interface/method name but behave differently.
+Example: both Dog and Cat implement speak(), but each returns a different sound. Code can call animal.speak() without caring which animal it is.
+
+What is method resolution order (MRO)?
+
+MRO is the order Python uses to decide which parent class method to call when multiple inheritance is involved.
+Python computes MRO using the C3 linearization algorithm, and you can inspect it with:
+
+ClassName.mro()
