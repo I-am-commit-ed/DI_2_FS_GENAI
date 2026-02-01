@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coloring Squares</title>
+  <style>
+    :root{
+      --cell: 16px;       /* size of each drawing cell */
+      --gap: 1px;         /* grid line thickness */
+      --border: #2b2b2b;
+      --gridline: #d9d9d9;
+      --panel: #bdbdbd;
+      --bg: #ffffff;
+    }
+
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 24px;
+      color: #111;
+    }
+
+    h1{
+      margin: 0 0 8px;
+      font-size: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .wrap{
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 18px;
+      align-items: start;
+      max-width: 1100px;
+    }
+
+    /* LEFT: tools */
+    .tools{
+      background: var(--panel);
+      border: 3px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .btn{
+      width: 100%;
+      border: 2px solid var(--border);
+      background: #eaeaea;
+      border-radius: 10px;
+      padding: 14px 10px;
+      font-size: 26px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    .palette{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .swatch{
+      height: 64px;
+      border: 3px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.25);
+    }
+
+    .swatch.selected{
+      outline: 5px solid rgba(0,0,0,0.65);
+      outline-offset: 2px;
+    }
+
+    /* RIGHT: drawing board */
+    .board{
+      background: var(--panel);
+      border: 3px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .grid{
+      /* big white area */
+      background: var(--bg);
+      border: 3px solid var(--border);
+      border-radius: 6px;
+
+      display: grid;
+      gap: var(--gap);
+      /* columns are set by JS (repeat(cols, var(--cell))) */
+
+      /* subtle "gridline" look via gap color */
+      padding: var(--gap);
+      background-clip: content-box;
+    }
+
+    .cell{
+      width: var(--cell);
+      height: var(--cell);
+      background: #fff;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* mobile-friendly */
+    @media (max-width: 900px){
+      .wrap{ grid-template-columns: 1fr; }
+      .tools{ order: 0; }
+      .board{ order: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>What You Will Create:</h1>
+
+  <div class="wrap">
+    <aside class="tools">
+      <button id="clearBtn" class="btn">Clear</button>
+      <div id="palette" class="palette"></div>
+    </aside>
+
+    <main class="board">
+      <div id="grid" class="grid" aria-label="Drawing Grid"></div>
+    </main>
+  </div>
+
+  <script>
+    // -----------------------------
+    // CONFIG
+    // -----------------------------
+    const COLORS = [
+      "#ff0000", "#ff6a00", "#ffb000",
+      "#ffff00", "#9acd32", "#90ee90",
+      "#006400", "#40e0d0", "#00ffff",
+      "#87cefa", "#1e90ff", "#0000ff",
+      "#00008b", "#4b0082", "#8b008b",
+      "#ee82ee", "#ffc0cb", "#d9d9d9",
+      "#808080", "#000000", "#ffffff"
+    ];
+
+    // grid size (you can tweak)
+    const COLS = 60;
+    const ROWS = 30;
+
+    // -----------------------------
+    // STATE
+    // -----------------------------
+    let selectedColor = COLORS[0];
+    let isDrawing = false;
+
+    const paletteEl = document.getElementById("palette");
+    const gridEl = document.getElementById("grid");
+    const clearBtn = document.getElementById("clearBtn");
+
+    // -----------------------------
+    // BUILD PALETTE
+    // -----------------------------
+    function buildPalette(){
+      COLORS.forEach((c, idx) => {
+        const sw = document.createElement("div");
+        sw.className = "swatch";
+        sw.style.background = c;
+        sw.dataset.color = c;
+
+        if (idx === 0) sw.classList.add("selected");
+
+        sw.addEventListener("click", () => {
+          selectedColor = c;
+          document.querySelectorAll(".swatch").forEach(s => s.classList.remove("selected"));
+          sw.classList.add("selected");
+        });
+
+        paletteEl.appendChild(sw);
+      });
+    }
+
+    // -----------------------------
+    // BUILD DRAWING GRID
+    // -----------------------------
+    function buildGrid(cols, rows){
+      // Set CSS grid columns dynamically
+      gridEl.style.gridTemplateColumns = `repeat(${cols}, var(--cell))`;
+
+      const total = cols * rows;
+
+      // Use a DocumentFragment for performance
+      const frag = document.createDocumentFragment();
+      for(let i = 0; i < total; i++){
+        const cell = document.createElement("div");
+        cell.className = "cell";
+
+        // Paint on mousedown
+        cell.addEventListener("mousedown", (e) => {
+          e.preventDefault(); // avoid text selection drag
+          isDrawing = true;
+          paint(cell);
+        });
+
+        // Paint on mouseover while drawing (drag)
+        cell.addEventListener("mouseover", () => {
+          if (isDrawing) paint(cell);
+        });
+
+        frag.appendChild(cell);
+      }
+
+      gridEl.appendChild(frag);
+    }
+
+    function paint(cell){
+      cell.style.background = selectedColor;
+    }
+
+    // Stop drawing when mouse is released anywhere
+    document.addEventListener("mouseup", () => {
+      isDrawing = false;
+    });
+
+    // Clear button
+    clearBtn.addEventListener("click", () => {
+      document.querySelectorAll(".cell").forEach(cell => {
+        cell.style.background = "#ffffff";
+      });
+    });
+
+    // Nice-to-have: prevent dragging images/selection inside grid
+    gridEl.addEventListener("dragstart", (e) => e.preventDefault());
+
+    // Init
+    buildPalette();
+    buildGrid(COLS, ROWS);
+  </script>
+</body>
+</html>
