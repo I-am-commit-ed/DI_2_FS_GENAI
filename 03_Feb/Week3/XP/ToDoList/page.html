@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo List</title>
+
+    <!-- Font Awesome for the X icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Todo List</h1>
+
+      <!-- Form -->
+      <form id="taskForm">
+        <input id="taskInput" type="text" placeholder="Add a task..." />
+        <button id="submitBtn" type="submit">Submit</button>
+      </form>
+
+      <!-- Empty div below the form -->
+      <div class="listTasks"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
